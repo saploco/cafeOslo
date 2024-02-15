@@ -1,0 +1,651 @@
+*{
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url(/descargas/OpenSans_Condensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans ExtraBold";
+    src: url(/descargas/OpenSans_Condensed-ExtraBold.ttf);
+}
+
+body{
+    font-family: "Open Sans Regular";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    font-size: 16px;
+    color: #f5f0ed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.padre{
+    background: url(/descargas/Fondo1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 76%;
+}
+
+.bienvenida{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tituloBienvenida{
+    font-family: "Open Sans ExtraBold";
+    text-align: center;
+    font-size: 44px;
+    margin: 20px 0;
+    color: #f5f0ed;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.textoBienvenida{
+    text-align: center;
+    margin: 20px;
+    width: 90%;
+    display: flex;
+    align-self: center;
+    font-size: 24px;
+    color: #f5f0ed;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media screen and (min-width: 800px) {
+    .textoBienvenida{
+        width: 50%;
+    }
+}
+
+header{
+    height: 125px;
+    width: 100%;
+}
+
+.navegacion{
+    width: 400px;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    overflow: hidden;
+}
+
+.navegacion a{
+    text-decoration: underline;
+    color: #f5f0ed;
+}
+
+.elEspacio{
+    position: absolute;
+    left: 0;
+    top: 35px
+}
+
+.productos{
+    position: absolute;
+    left: 80px;
+    top: 35px
+}
+
+.ofertas{
+    position: absolute;
+    left: 157px;
+    top: 35px
+}
+
+.reservas{
+    position: absolute;
+    left: 217px;
+    top: 35px
+}
+
+.contacto{
+    position: absolute;
+    left: 287px;
+    top: 35px
+}
+
+.tres-rayitas{
+    width: 40px;
+    background-color: transparent;
+    border-radius: 3px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.cafe-oslo{
+    width: 150px;
+    position: absolute;
+    top: 15px;
+    left: 22px;
+}
+
+@media screen and (min-width:640px) {
+    .tres-rayitas{
+        display: none;
+    }
+    
+    .navegacion li{
+        margin-right: 15px;
+
+    }
+    .elEspacio{
+        position: absolute;
+        left: 0px;
+        top: 35px
+    }
+    
+    .productos{
+        position: absolute;
+        left: 80px;
+        top: 35px
+    }
+    .ofertas{
+        position: absolute;
+        left: 160px;
+        top: 35px
+    }
+
+    .reservas{
+        position: absolute;
+        left: 220px;
+        top: 35px
+    }
+
+    .contacto{
+        position: absolute;
+        left: 290px;
+        top: 35px
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .js .navegacion{
+        max-height: 0;
+        width: 100px;
+        transition: .7s;
+        overflow: hidden;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+        right: 70px;
+        top: 28px;
+        border-radius: 5px;
+        position: relative;
+    }
+    .js .navegacion a{
+        padding: 5 10px;
+        color: #f5f0ed;
+        border-top: 1px rgba(255, 255, 255, .4);
+    }
+    .js .navegacion.menu-desplegado{
+        overflow: hidden;
+        max-height: 200px;
+        width: 150px;
+        border-radius: 5px;
+    }
+    .elEspacio{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 10px
+    }
+    
+    .productos{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 30px
+    }
+    .ofertas{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 50px
+    }
+    .reservas{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 70px
+    }
+
+    .contacto{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 90px
+    }
+}
+
+.padreSeccionDos{
+    display: flex;
+    height: 341px;
+    position: relative;
+}
+
+.hijoUno{
+    background-color: #d03b40;
+    color: #ded6c0;
+    text-align: center;
+    font-size:  20px;
+}
+
+.hijoDos{
+    background-color: #ded6c0;
+    color: #d03b40;
+    text-align: center;
+    font-size:  20px;
+}
+
+.padreSeccionDos h3{
+    font-family: "Open Sans Regular";
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 590px) {
+    .hijoUno{
+        float: none;
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        position: absolute;
+        top: 0;
+    }
+    .hijoDos{
+        float: none;
+        width: 100%;
+        height: 50%;
+        font-size: 18px;
+        position: absolute;
+        bottom: 0;
+    }
+    .padreSeccionDos h3{
+        margin: 0;
+    }
+}
+
+.seccionTres{
+    height: 351px;
+    background: url(/descargas/Fondo2.jpg) no-repeat;
+    background-size: cover;
+}
+
+.tituloSeccionTres{
+    font-family: "Open Sans ExtraBold";
+    font-size: 44px;
+    color: #ded6c0;
+    text-align: center;
+    padding: 30px;
+}
+
+.textoSeccionTres{
+    font-size: 24px;
+    color: #ded6c0;
+    text-align: center;
+    padding-top: 15px;
+    width: 700px;
+    left: 500px;
+}
+
+.contenidoTextoSeccionTres{
+    position: absolute;
+    top: 40;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+}
+
+.enlaceSeccionTres{
+    font-size: 20px;
+    color: #ded6c0;
+    text-align: center;
+    height: 60px;
+    width: 260px;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ded6c0;
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.contenidoEnlace{
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.enlaceSeccionTres a{
+    text-decoration: none;
+    color: #ded6c0;
+}
+
+
+.seccionCuatro{
+    position: relative;
+}
+
+.seccionCuatro h3{
+    font-family: "Open Sans ExtraBold";
+}
+
+@media screen and (max-width: 905px){
+    .tituloSeccionTres{
+        font-size: 40px;
+        padding: 10px;
+    }
+    .textoSeccionTres{
+        font-size: 22px;
+    }
+    .enlaceSeccionTres{
+        top: 190px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .textoSeccionTres{
+        font-size: 20px;
+    }
+}
+
+/* primer par */
+
+.panRecienHecho{
+    float: left;
+    color: #3c3c3b;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.contenidoSeccionCuatro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    float: right;
+}
+
+.panRecienHecho img{
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+.panRecienHecho h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.tartasParaCadaDia{
+    float: left;
+    color: #3c3c3b;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.tartasParaCadaDia img{
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+.tartasParaCadaDia h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* segundo par */
+
+
+.pruebaNuestrosDulces{
+    float: left;
+    color: #3c3c3b;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.pruebaNuestrosDulces img{
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+.pruebaNuestrosDulces h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.ingredientesEcologicos{
+    float: left;
+    color: #3c3c3b;
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.ingredientesEcologicos img{
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+.ingredientesEcologicos h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .seccionCuatro img{
+        width: 140px;
+        height: 140px;
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+    .contenidoSeccionCuatro h3{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+    .contenidoSeccionCuatro p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .seccionCuatro img{
+        width: 120px;
+        height: 120px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .contenidoSeccionCuatro h3{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .contenidoSeccionCuatro p{
+        font-size: 14px;
+    }
+    .tartasParaCadaDia{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .seccionCuatro img{
+        display: none;
+    }
+    .panRecienHecho, .tartasParaCadaDia, .pruebaNuestrosDulces, .ingredientesEcologicos{
+        float: none;
+        width: 100%;
+    }
+    .contenidoSeccionCuatro h3{
+        font-size: 24px;
+    }
+    .contenidoSeccionCuatro p{
+        font-size: 16px;
+    }
+}
+
+.seccionCinco{
+    display: flex;
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+
+.hijoUnoSeccionCinco{
+    position: relative;
+    width: 50%;
+    background-color: #ded6c0;
+    color: #d03b40;
+    text-align: center;
+    font-size:  24px;
+    padding-inline: 2px;
+}
+
+.hijoDosSeccionCinco{
+    position: relative;
+    width: 50%;
+    background-color: #d03b40;
+    color: #ded6c0;
+    text-align: center;
+    font-size:  24px;
+    padding-inline: 2px;
+}
+
+.seccionCinco h3{
+    font-family: "Open Sans ExtraBold";
+    font-size: 44px;
+    margin: 0;
+}
+
+.hijoUnoSeccionCinco a{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    text-decoration: none;
+    color: #d03b40;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #d03b40;
+}
+
+.hijoDosSeccionCinco a{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    text-decoration: none;
+    color: #ded6c0;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #ded6c0;
+}
+
+.seccionCinco p{
+    position: absolute;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media screen and (max-width: 1200px) {
+    .seccionCinco p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .seccionCinco p{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .seccionCinco{
+        height: 100%;
+    }
+    .hijoUnoSeccionCinco{
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+    }
+    .hijoDosSeccionCinco{
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+    }
+    .hijoUnoSeccionCinco p{
+        font-size: 24px;
+    }
+    .hijoDosSeccionCinco p{
+        font-size: 24px;
+    }
+    .seccionCinco a{
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .hijoUnoSeccionCinco p{
+        font-size: 22px;
+    }
+    .hijoDosSeccionCinco p{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .hijoUnoSeccionCinco h3{
+        font-size: 36px;
+    }
+    .hijoUnoSeccionCinco p{
+        font-size: 20px;
+    }
+    .hijoDosSeccionCinco p{
+        font-size: 20px;
+    }
+}
